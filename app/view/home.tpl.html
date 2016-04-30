@@ -1,0 +1,25 @@
+<div class="SiteTitle">
+        <div class="SiteTitle-Text ms-Font-su ms-fontColor-themeDarkAlt">Connecting Australia</div>
+    </div>
+
+    <div class="FormArea">
+        
+
+        <uif-dropdown ng-model="countryValue" >
+            <uif-dropdown-option ng-repeat="item in countryList" ng-value="'{{item}}'">{{item}}</uif-dropdown-option>
+        </uif-dropdown>
+        
+        <uif-dropdown ng-model="ageValue" >
+            <uif-dropdown-option ng-repeat="item in ageList" ng-value="'{{item}}'">{{item}}</uif-dropdown-option>
+        </uif-dropdown>
+        
+        <uif-dropdown ng-model="suburbValue" >
+            <uif-dropdown-option ng-repeat="item in suburbList" ng-value="'{{item}}'">{{item}}</uif-dropdown-option>
+        </uif-dropdown>
+        <div class="SubmitButton">
+            <uif-button uif-type="primary" ng-click="featureClicked()">Click Me!</uif-button>
+        </div>
+        <div class="SubmitButton">
+            <uif-button uif-type="primary" ng-click="feature2Clicked()">Load!</uif-button>
+        </div>
+    </div>

@@ -1,61 +1,46 @@
 <html>
+
 <head>
     <title>Connecting Australia</title>
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <link href="vendor/fabric/css/fabric.min.css" type="text/css" rel="stylesheet" />
-    <link href="vendor/fabric/css/fabric.components.min.css" type="text/css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="vendor/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-    <link href="css/app.css" type="text/css" rel="stylesheet" />
+    <link href="assets/vendor/fabric/css/fabric.min.css" type="text/css" rel="stylesheet" />
+    <link href="assets/vendor/fabric/css/fabric.components.min.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link href="assets/css/app.css" type="text/css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="description" content="" />
-</head>    
-<body>
-                  
+</head>
 
- <div class="SiteTitle">
-    <div class="SiteTitle-Text ms-Font-su ms-fontColor-themeDarkAlt">Connecting Australia</div>
-</div>
-
-    <div class="FormArea">
-        <div class="ms-Dropdown" tabindex="0"> <i class="ms-Dropdown-caretDown ms-Icon ms-Icon--caretDown"></i><select class="ms-Dropdown-select">
-<option value="Choose a sound…">Choose a country…</option>
-<option value="Dog barking">Dog barking</option>
-<option value="Wind blowing">Wind blowing</option>
-<option value="Duck quacking">Duck quacking</option>
-<option value="Cow mooing">Cow mooing</option>
-</select></div>
-        
-                <div class="ms-Dropdown" tabindex="0"> <i class="ms-Dropdown-caretDown ms-Icon ms-Icon--caretDown"></i><select class="ms-Dropdown-select">
-<option value="Choose a sound…">Choose an age…</option>
-<option value="Dog barking">Dog barking</option>
-<option value="Wind blowing">Wind blowing</option>
-<option value="Duck quacking">Duck quacking</option>
-<option value="Cow mooing">Cow mooing</option>
-</select></div>
-        
-         <div class="ms-Dropdown" tabindex="0"> <i class="ms-Dropdown-caretDown ms-Icon ms-Icon--caretDown"></i><select class="ms-Dropdown-select">
-<option value="Choose a sound…">Choose a language…</option>
-<option value="Dog barking">Dog barking</option>
-<option value="Wind blowing">Wind blowing</option>
-<option value="Duck quacking">Duck quacking</option>
-<option value="Cow mooing">Cow mooing</option>
-</select></div>
-        <div class="SubmitButton">
-        <button class="ms-Button ms-Button--primary"> <span class="ms-Button-icon"><i class="ms-Icon ms-Icon--plus"></i></span> <span class="ms-Button-label">Create account</span> <span class="ms-Button-description">Description of the action this button takes</span> </button>
-            </div>
-    </div>
+<body ng-app="app">
 
 
-                
+    <div ng-view></div>
 
-<script src="vendor/jquery/jquery-1.12.3.min.js"></script>
-<script src="vendor/fabric/js/jquery.fabric.min.js"></script>
 
-<script>
-  $(document).ready(function() {
+<script type="text/javascript"
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSSN0W0toQeZzU39kG0OKvyocElXcb5GI&libraries=geometry">
+</script>
+<script src="assets/vendor/lokijs/lokijs.min.js"></script>
+    <script src="assets/vendor/jquery/jquery-1.12.3.min.js"></script>
+    <script src="assets/vendor/fabric/js/jquery.fabric.min.js"></script>
+    <script src="assets/vendor/angularjs/angular.js"></script>
+    <script src="assets/vendor/angularjs/angular-route.min.js"></script>
+    <script src="assets/vendor/lokijs/loki-angular.js"></script>
+    <script src="assets/vendor/angularjs/ngOfficeUiFabric.js"></script>
+    
+    
+    <script src="app/app.js"></script>
+    <script src="app/service/geoService.js"></script>
+    <script src="app/service/constService.js"></script>
+    <script src="app/service/dataService.js"></script>
+    <script src="app/controller/homeCtrl.js"></script>
+    <script src="app/controller/recommendCtrl.js"></script>
+    
+    <script>
+        $(document).ready(function() {
         // Check to make sure the NavBar plugin is available, then run it
         if ($.fn.CommandBar) {
           $('.ms-CommandBar').CommandBar();
@@ -64,8 +49,10 @@
           $('.ms-Dropdown').Dropdown();
         }
     });
-</script>              
+
+    </script>
 
 
 </body>
+
 </html>

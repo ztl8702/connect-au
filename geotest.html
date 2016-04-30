@@ -1,0 +1,54 @@
+
+<html>
+
+<head>
+    <title>Connecting Australia</title>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+</head>
+
+<body>
+<body onload="initialize()">
+ <div id="map" style="width: 320px; height: 480px;"></div>
+  <div>
+    <input id="address" type="textbox" value="Sydney, NSW">
+    <input type="button" value="Encode" onclick="codeAddress()">
+  </div>
+</body>
+
+<script type="text/javascript"
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSSN0W0toQeZzU39kG0OKvyocElXcb5GI&libraries=geometry">
+</script>
+    <script>
+      var geocoder;
+  var map;
+  function initialize() {
+    geocoder = new google.maps.Geocoder();
+    var latlng = new google.maps.LatLng(-34.397, 150.644);
+    var mapOptions = {
+      zoom: 8,
+      center: latlng
+    }
+    map = new google.maps.Map(document.getElementById("map"), mapOptions);
+  }
+
+  function codeAddress() {
+    var address = document.getElementById("address").value;
+    geocoder.geocode( { 'address': address}, function(results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+        console.log(results[0].geometry.location.lat(), ',',results[0].geometry.location.lng());
+        map.setCenter(results[0].geometry.location);
+        var marker = new google.maps.Marker({
+            map: map,
+            position: results[0].geometry.location
+        });
+      } else {
+        alert("Geocode was not successful for the following reason: " + status);
+      }
+    });
+  }
+</script>
+</body>
+
+</html>
