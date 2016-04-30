@@ -1,0 +1,25 @@
+body {
+    background-color: azure;
+}
+.SiteTitle {
+    text-align: center;
+    margin-top:20vh;
+    margin-bottom:5vh;
+}
+
+.SiteTitle-Text {
+    font-size: 100px;
+}
+
+.FormArea {
+    width:50vw;
+    margin: 0 auto;
+    min-width: 400px;
+}
+
+
+.SubmitButton{
+    margin-top: 5vh;
+    text-align: center;
+}
+
