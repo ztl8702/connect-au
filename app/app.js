@@ -11,7 +11,7 @@
             })  
             .when('/recommend', {  
                 templateUrl: 'app/view/recommend.tpl.html',  
-                controller: 'recommedCtrl'
+                controller: 'recommendCtrl'
             })
             .when('/help', {  
                 templateUrl: 'app/view/help.tpl.html' 

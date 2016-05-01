@@ -5,14 +5,12 @@
         $scope.suburbList = constService.suburbList;
         $scope.ageList = constService.ageList;
         $scope.countryList = constService.countryList;
+        $scope.ancestryList = constService.ancestryList;
+        $scope.languageList = constService.languageList;
         $scope.featureClicked = function () {
-           dataService.printAll();
-            console.log("printed");
+           $location.path('/recommend/').search({language: $scope.languageValue, country:$scope.countryValue,
+                                                age: $scope.ageValue,  ancestry: $scope.ancestryValue});
         };
-        $scope.feature2Clicked = function () {
-           dataService.fillLocations()
-        
-        }
         
     }]);
 }());

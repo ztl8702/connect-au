@@ -13,13 +13,16 @@
             <uif-dropdown-option ng-repeat="item in ageList" ng-value="'{{item}}'">{{item}}</uif-dropdown-option>
         </uif-dropdown>
         
-        <uif-dropdown ng-model="suburbValue" >
-            <uif-dropdown-option ng-repeat="item in suburbList" ng-value="'{{item}}'">{{item}}</uif-dropdown-option>
+        <uif-dropdown ng-model="languageValue" >
+            <uif-dropdown-option ng-repeat="item in languageList" ng-value="'{{item}}'">{{item}}</uif-dropdown-option>
+        </uif-dropdown>
+        
+        <uif-dropdown ng-model="ancestryValue" >
+            <uif-dropdown-option ng-repeat="item in ancestryList" ng-value="'{{item}}'">{{item}}</uif-dropdown-option>
         </uif-dropdown>
         <div class="SubmitButton">
-            <uif-button uif-type="primary" ng-click="featureClicked()">Click Me!</uif-button>
+            <uif-button uif-type="primary" ng-click="featureClicked()">Find my suburb</uif-button>
         </div>
-        <div class="SubmitButton">
-            <uif-button uif-type="primary" ng-click="feature2Clicked()">Load!</uif-button>
-        </div>
+<!--
+        <iframe width="800" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiYzgzZjMwZDYtN2Y5My00ZmE5LWJmMDItNWJmNjg0ZTBiMjg5IiwidCI6IjBlNWJmM2NmLTFmZjQtNDZiNy05MTc2LTUyYzUzOGMyMmE0ZCIsImMiOjEwfQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>-->
     </div>
